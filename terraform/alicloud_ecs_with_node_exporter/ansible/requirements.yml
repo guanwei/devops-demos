@@ -1,8 +1,11 @@
 - src: https://github.com/guanwei/ansible-node-exporter
+  version: master
   name: node_exporter
 
 - src: https://github.com/guanwei/ansible-register-consul-service
+  version: master
   name: register_consul_service
 
 - src: https://github.com/guanwei/ansible-deregister-consul-service
+  version: master
   name: deregister_consul_service
