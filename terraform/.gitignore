@@ -1,8 +1,8 @@
 ## terraform files
 .terraform
-terraform.tfstate
 terraform.tfvars
 *.tfstate*
 
 ## ansible files
 *.retry
+roles
