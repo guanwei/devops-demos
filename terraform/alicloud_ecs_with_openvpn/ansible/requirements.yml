@@ -1,0 +1,3 @@
+- src: https://github.com/guanwei/ansible-openvpn
+  version: master
+  name: openvpn

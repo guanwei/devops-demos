@@ -3,9 +3,10 @@
   roles:
     - role: node_exporter
     - role: register_consul_service
-      service_name_prefix: node-exporter
-      service_port: 9100
-      service_tags: ["node-exporter","metrics"]
-      http_path: /metrics
-      interval: 30s
-      timeout: 3s
+      vars:
+        service_name_prefix: node-exporter
+        service_port: 9100
+        service_tags: ["node-exporter","metrics"]
+        http_path: /metrics
+        interval: 30s
+        timeout: 3s

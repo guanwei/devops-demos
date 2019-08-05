@@ -2,4 +2,5 @@
 - hosts: localhost
   roles:
     - role: deregister_consul_service
-      service_name_prefix: node-exporter
+      vars:
+        service_name_prefix: node-exporter

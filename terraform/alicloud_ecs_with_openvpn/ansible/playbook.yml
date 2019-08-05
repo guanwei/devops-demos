@@ -1,0 +1,11 @@
+---
+- hosts: all
+  roles:
+    - role: openvpn
+      vars:
+        ca_password: "06yNFfIJUBcPPVpQ"
+        openvpn_clients:
+          - client01
+          - client02
+        openvpn_download_clients: true
+        openvpn_download_dir: "../openvpn_clients/"

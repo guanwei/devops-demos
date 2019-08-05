@@ -1,3 +1,6 @@
+## OS-specific files
+.DS_Store
+
 ## terraform files
 .terraform
 terraform.tfvars
@@ -5,4 +8,7 @@ terraform.tfvars
 
 ## ansible files
 *.retry
+
+## custom files
 roles
+openvpn_clients
