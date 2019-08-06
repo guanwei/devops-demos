@@ -1,9 +1,0 @@
----
-- hosts: all
-  roles:
-    - role: jumpserver
-      vars:
-        mariadb_root_password: Q1w2e3r4
-        jumpserver_db_password: jumpserver
-        secret_key: 'uQguZIl3tmBVsyUA2uRnV7VsIlECvsss0pIUY4COxoH2nEsSwR'
-        bootstrap_token: 'an2wB0TEqMgB8EMn'

@@ -1,0 +1,4 @@
+---
+- hosts: localhost
+  roles:
+    - deregister_consul_service

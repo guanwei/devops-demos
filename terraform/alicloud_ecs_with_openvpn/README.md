@@ -1,7 +1,7 @@
 ## Download ansible roles
 
 ```
-$ ansible-galaxy install --force -r ansible/requirements.yml -p ansible/roles
+$ ansible-galaxy install --force -r requirements.yml -p roles
 ```
 
 ## Set alicloud access_key and security_key
