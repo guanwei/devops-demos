@@ -8,7 +8,3 @@ terraform.tfvars
 
 ## ansible files
 *.retry
-
-## custom files
-roles
-openvpn_clients
