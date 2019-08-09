@@ -48,7 +48,7 @@ module "ecs_with_node_exporter" {
   eip = {
     bandwidth = 50
   }
-  sleep_time    = 10
+  sleep_time    = 60
   playbook_file = "playbook.yml"
   playbook_extra_vars = {
     consul_address      = "${var.consul_address}"

@@ -44,7 +44,7 @@ module "ecs_with_openvpn" {
   eip = {
     bandwidth = 50
   }
-  sleep_time    = 10
+  sleep_time    = 60
   playbook_file = "playbook.yml"
   playbook_extra_vars = {
     ca_password   = "06yNFfIJUBcPPVpQ"

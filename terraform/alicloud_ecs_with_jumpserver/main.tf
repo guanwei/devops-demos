@@ -45,7 +45,7 @@ module "ecs_with_jumpserver" {
   eip = {
     bandwidth = 50
   }
-  sleep_time    = 10
+  sleep_time    = 60
   playbook_file = "playbook.yml"
   playbook_extra_vars = {
     mariadb_root_password  = "Q1w2e3r4"
