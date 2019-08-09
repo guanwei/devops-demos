@@ -9,10 +9,10 @@ provider "alicloud" {
 module "ecs_with_jumpserver" {
   source = "git::https://github.com/guanwei/terraform-modules//alicloud/ecs-instance"
 
-  name                       = "ecs_with_jumpserver"
-  image_id                   = "centos_7_06_64_20G_alibase_20190711.vhd"
-  password                   = "Just4Demo"
-  vpc_id                     = "vpc-********"
+  name     = "ecs_with_jumpserver"
+  image_id = "centos_7_06_64_20G_alibase_20190711.vhd"
+  password = "Just4Demo"
+  vpc_id   = "vpc-********"
   security_group_rules = [
     {
       type        = "ingress"
@@ -48,10 +48,10 @@ module "ecs_with_jumpserver" {
   sleep_time    = 10
   playbook_file = "playbook.yml"
   playbook_extra_vars = {
-    mariadb_root_password = "Q1w2e3r4"
+    mariadb_root_password  = "Q1w2e3r4"
     jumpserver_db_password = "jumpserver"
-    secret_key = "uQguZIl3tmBVsyUA2uRnV7VsIlECvsss0pIUY4COxoH2nEsSwR"
-    bootstrap_token = "an2wB0TEqMgB8EMn"
+    secret_key             = "uQguZIl3tmBVsyUA2uRnV7VsIlECvsss0pIUY4COxoH2nEsSwR"
+    bootstrap_token        = "an2wB0TEqMgB8EMn"
   }
 }
 

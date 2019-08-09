@@ -21,10 +21,10 @@ variable "node_exporter_consul_service_name_prefix" {
 module "ecs_with_node_exporter" {
   source = "git::https://github.com/guanwei/terraform-modules//alicloud/ecs-instance"
 
-  name                       = "ecs_with_node_exporter"
-  image_id                   = "centos_7_06_64_20G_alibase_20190711.vhd"
-  password                   = "Just4Demo"
-  vpc_id                     = "vpc-********"
+  name     = "ecs_with_node_exporter"
+  image_id = "centos_7_06_64_20G_alibase_20190711.vhd"
+  password = "Just4Demo"
+  vpc_id   = "vpc-********"
   security_group_rules = [
     {
       type        = "ingress"
@@ -51,13 +51,13 @@ module "ecs_with_node_exporter" {
   sleep_time    = 10
   playbook_file = "playbook.yml"
   playbook_extra_vars = {
-    consul_address = "${var.consul_address}"
+    consul_address      = "${var.consul_address}"
     service_name_prefix = "${var.node_exporter_consul_service_name_prefix}"
-    service_port = "${var.node_exporter_port}"
-    service_tags = ["node-exporter","metrics"]
-    http_path = "/metrics"
-    interval = "30s"
-    timeout = "3s"
+    service_port        = "${var.node_exporter_port}"
+    service_tags        = ["node-exporter", "metrics"]
+    http_path           = "/metrics"
+    interval            = "30s"
+    timeout             = "3s"
   }
 }
 

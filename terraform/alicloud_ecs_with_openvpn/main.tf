@@ -17,10 +17,10 @@ variable "openvpn_port" {
 module "ecs_with_openvpn" {
   source = "git::https://github.com/guanwei/terraform-modules//alicloud/ecs-instance"
 
-  name           = "ecs_with_openvpn"
-  image_id       = "centos_7_06_64_20G_alibase_20190711.vhd"
-  password       = "Just4Demo"
-  vpc_id         = "vpc-********"
+  name     = "ecs_with_openvpn"
+  image_id = "centos_7_06_64_20G_alibase_20190711.vhd"
+  password = "Just4Demo"
+  vpc_id   = "vpc-********"
   security_group_rules = [
     {
       type        = "ingress"
@@ -44,12 +44,12 @@ module "ecs_with_openvpn" {
   eip = {
     bandwidth = 50
   }
-  sleep_time = 10
+  sleep_time    = 10
   playbook_file = "playbook.yml"
   playbook_extra_vars = {
-    ca_password = "06yNFfIJUBcPPVpQ"
+    ca_password   = "06yNFfIJUBcPPVpQ"
     openvpn_proto = "${var.openvpn_proto}"
-    openvpn_port = "${var.openvpn_port}"
+    openvpn_port  = "${var.openvpn_port}"
     openvpn_clients = [
       "client01",
       "client02"
@@ -58,7 +58,7 @@ module "ecs_with_openvpn" {
       "client02"
     ]
     openvpn_download_clients = "true"
-    openvpn_download_dir = "openvpn_clients/"
+    openvpn_download_dir     = "openvpn_clients/"
   }
 }
 
